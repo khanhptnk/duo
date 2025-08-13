@@ -1,0 +1,18 @@
+name: "procgen_always"
+
+env:
+  name: "procgen"
+  train:
+    distribution_mode: "hard"
+
+algorithm:
+  name: "always"
+
+policy:
+  name: "always"
+  agent: "novice"
+
+train_novice: "experiments/procgen_novice/best_test.ckpt"
+train_expert: "experiments/procgen_expert/best_test.ckpt"
+test_novice: "experiments/procgen_novice/best_test.ckpt"
+test_expert: "experiments/procgen_expert/best_test.ckpt"

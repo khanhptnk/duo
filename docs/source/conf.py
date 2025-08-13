@@ -1,0 +1,30 @@
+# Configuration file for the Sphinx documentation builder.
+
+project = "duo-ai"
+copyright = "2025, Khanh Nguyen"
+author = "Khanh Nguyen"
+release = "1.0.0"
+
+extensions = [
+    "autoapi.extension",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
+    "sphinx_copybutton",
+]
+
+autoapi_type = "python"
+autoapi_dirs = ["../../duo_ai"]
+autoapi_template_dir = "_templates/autoapi"
+
+templates_path = ["_templates"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+
+html_theme = "furo"
+html_logo = "images/logo.png"
+html_favicon = "images/logo.png"
+# html_static_path = ['_static']
+
+napoleon_google_docstring = True
+napoleon_numpy_docstring = True
+
+# End of file

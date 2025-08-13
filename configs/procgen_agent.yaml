@@ -1,0 +1,16 @@
+name: "procgen_agent"
+
+env:
+  name: "procgen"
+  train:
+    distribution_mode: "easy"
+  test:
+    distribution_mode: "easy"
+
+algorithm:
+  name: "ppo"
+  total_timesteps: 15000000
+
+policy:
+  name: "ppo"
+  model: "impala_ppo"

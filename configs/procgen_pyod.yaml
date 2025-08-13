@@ -1,0 +1,22 @@
+name: "procgen_pyod"
+
+env:
+  name: "procgen"
+  train:
+    distribution_mode: "hard"
+
+algorithm:
+  name: "pyod"
+
+policy:
+  name: "pyod"
+  method: "deep_svdd.DeepSVDD"
+  feature_type: "hidden"
+  pyod_config:
+    n_features: 256
+    epochs: 100
+
+train_novice: "experiments/procgen_novice/best_test.ckpt"
+train_expert: "experiments/procgen_expert/best_test.ckpt"
+test_novice: "experiments/procgen_novice/best_test.ckpt"
+test_expert: "experiments/procgen_expert/best_test.ckpt"
